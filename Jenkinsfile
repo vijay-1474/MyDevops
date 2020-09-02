@@ -2,7 +2,7 @@ node('master')
 {
     stage('ContinuousDownload_Master') 
     {
-         git 'https://github.com/intelliqittrainings/maven.git'
+         git 'https://github.com/Suryam2498/MyDevops.git'
     }
      stage('ContinuousBuild_Master') 
     {
@@ -19,12 +19,9 @@ node('master')
     }
      stage('ContinuousDelivery_Master')
     {
-        input message: 'Waiting for Approval from the DM!', submitter: 'srinivas'
+        //input message: 'Waiting for Approval from the DM!', submitter: 'srinivas'
         sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war ubuntu@172.31.48.61:/var/lib/tomcat8/webapps/prodapp.war'
     }
     
-    
-    
-    
-    
+ 
 }
