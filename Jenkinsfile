@@ -20,7 +20,7 @@ node('master')
      stage('ContinuousDelivery_Master')
     {
         //input message: 'Waiting for Approval from the DM!', submitter: 'srinivas'
-        sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war ubuntu@172.31.48.61:/var/lib/tomcat8/webapps/prodapp.war'
+        sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/ScriptedPipeline/webapp/target/webapp.war ubuntu@172.31.29.108:/var/lib/tomcat9/webapps/Sur_prod.war'
     }
     
  
