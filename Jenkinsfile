@@ -10,8 +10,8 @@ stages {
    {
      steps{   
         sh '''
-           echo "PATH=${PATH}" 
-           echo "M2_HOME=${M2_HOME}"
+           echo "PATH = ${PATH}" 
+           echo "M2_HOME = ${M2_HOME}"
         ...   
           }
     }
@@ -24,4 +24,5 @@ stages {
         sh 'mvn clean package'
         }
    }
+}
 }
